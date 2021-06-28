@@ -28,7 +28,7 @@ twitter_username: SUniversalgrou1
 github_username:  lines-of-codes
 
 # Build settings
-theme: alembic-jekyll-theme
+theme: minima
 plugins:
   - jekyll-feed
 
