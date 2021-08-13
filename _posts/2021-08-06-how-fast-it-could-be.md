@@ -59,7 +59,7 @@ It's a StoryScript cache print command. and yes, The current SSLLVM version will
 
 Which StoryScript cache is even not implemented in the main lexer... So It will be hard to use SSLLVM currently.
 
-```json
+```
 CALL print Hello, world!
 ```
 _Hello world example in StoryScript cache_
