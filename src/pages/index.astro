@@ -1,11 +1,184 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+	<NavBar />
+	<header>
+		<h1 class="text-6xl md:text-7xl font-bold">Satakun Utama</h1>
+		<p>A student looking for new things and gathering experience.</p>
+	</header>
+	<main>
+		<section
+			id="aboutme"
+			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 lg:grid lg:grid-cols-2"
+		>
+			<div class="flex flex-col justify-center">
+				<h2 class="text-5xl font-bold mb-2" id="aboutMeHeader">
+					About me
+				</h2>
+				<p class="md:text-base text-lg">
+					I'm a student currently studying at the Nongkhai Technical
+					College in Thailand, and I love trying new things! I'm
+					looking to gather experiences in various fields such as
+					graphic design, game development, and web development!
+				</p>
+			</div>
+		</section>
+		<section
+			id="projects"
+			class="bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50"
+		>
+			<h2 class="text-5xl font-bold pb-2">Projects</h2>
+			<div class="flex flex-col gap-2 mt-2">
+				<a
+					href="https://github.com/lines-of-codes/litechat"
+					target="_blank"
+					rel="noreferrer noopener"
+					class="card"
+				>
+					<h3>litechat</h3>
+					<p>
+						A lightweight and secure chat application.<br />
+						<strong>Related technologies:</strong> Web, PocketBase, Mithril.js
+					</p>
+				</a>
+				<a
+					href="https://github.com/StablerCharacter/StoryTailor"
+					target="_blank"
+					rel="noreferrer noopener"
+					class="card"
+				>
+					<h3>StoryTailor</h3>
+					<p>
+						Write stories anywhere. A cross-platform application for
+						writing visual novel stories.<br />
+						<strong>Related technologies:</strong> Flutter, Android,
+						PocketBase
+					</p>
+				</a>
+				<a
+					href="https://github.com/lines-of-codes/QSMSharp"
+					target="_blank"
+					rel="noreferrer noopener"
+					class="card"
+				>
+					<h3>QSMSharp</h3>
+					<p>
+						A server management software for Minecraft.<br />
+						<strong>Related technologies:</strong> C#, WinUI
+					</p>
+				</a>
+			</div>
+		</section>
+		<!-- <section
+			id="frameworks"
+			class="bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50"
+		>
+			<h2 class="text-5xl font-bold mb-2">Frameworks</h2>
+			<p>I have experience with the following web frameworks:</p>
+			<ul class="mt-4 framework-list flex flex-col gap-4">
+				<li>
+					<h3>React</h3>
+					A reactive framework.
+				</li>
+				<li>
+					<h3>Next.js</h3>
+					React, but ✨ fancy ✨ with features optimized for speed and
+					developer productivity.
+				</li>
+				<li>
+					<h3>Mithril.js</h3>
+					Fast and lightweight JavaScript framework for single page applications.
+				</li>
+				<li>
+					<h3>Alpine.js</h3>
+					Simple, lightweight, yet powerful.
+				</li>
+				<li>
+					<h3>Astro</h3>
+					The framework for content-driven websites.
+				</li>
+			</ul>
+			<h4 class="mt-6 text-xl font-semibold mb-2">
+				Wonder what to pick for your needs?
+			</h4>
+			<div>
+				<button
+					class="bg-slate-600 hover:bg-slate-700 transition-colors px-4 py-2 rounded-3xl text-slate-50"
+				>
+					Take a quiz on web frameworks
+				</button>
+			</div>
+		</section> -->
+		<section
+			id="contact"
+			class="bg-gradient-to-bl from-slate-700 to-slate-900 text-slate-50"
+		>
+			<h2 class="text-5xl font-bold mb-4">Contact</h2>
+			<ul>
+				<li>
+					<strong>Email:</strong> linesofcodes[at]dailitation[dot]xyz
+					<a
+						href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
+						class="underline"
+					>
+						(PGP/GPG key available)
+					</a>
+				</li>
+				<li><strong>Discord:</strong> gamecreator</li>
+				<li><strong>Instagram:</strong> satakun.utama</li>
+				<li><strong>Bluesky:</strong> @linesofcodes.bsky.social</li>
+			</ul>
+		</section>
+	</main>
+	<Footer />
 </Layout>
+
+<style>
+	header {
+		background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+		color: whitesmoke;
+		min-height: 90vh;
+		@apply md:px-32 px-16;
+	}
+	header,
+	#frameworks {
+		@apply flex flex-col justify-center;
+	}
+
+	section {
+		@apply md:px-32 px-16 py-24;
+	}
+
+	#projects h3 {
+		@apply text-3xl font-semibold;
+	}
+
+	#projects > h2 {
+		background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+		color: transparent;
+		background-clip: text;
+	}
+
+	#projects .card {
+		@apply hover:bg-slate-700 px-6 py-4 rounded-lg transition-colors;
+	}
+
+	#aboutMeHeader {
+		background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+		color: transparent;
+		background-clip: text;
+	}
+
+	#contact h2 {
+		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+		color: transparent;
+		background-clip: text;
+	}
+</style>

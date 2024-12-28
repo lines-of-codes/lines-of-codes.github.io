@@ -1,0 +1,31 @@
+<nav
+	class="fixed bg-gradient-to-b from-slate-700 to-transparent w-full flex gap-4 md:gap-6 justify-center py-4 text-slate-50"
+>
+	<a href="#aboutme">About me</a>
+	<a href="#projects">Projects</a>
+	<a href="#contact">Contact</a>
+</nav>
+
+<style>
+	a {
+		@apply transition-colors hover:text-orange-300;
+	}
+</style>
+
+<script defer>
+	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault();
+
+			const href = anchor.getAttribute("href");
+			if (href === null) return;
+
+			const target = document.querySelector(href);
+			if (target === null) return;
+
+			target.scrollIntoView({
+				behavior: "smooth",
+			});
+		});
+	});
+</script>
