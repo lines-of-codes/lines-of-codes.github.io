@@ -1,13 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import NavBar from "../components/NavBar.astro";
+import Layout from "../../layouts/th/Layout.astro";
+import Footer from "../../components/th/Footer.astro";
+import NavBar from "../../components/th/NavBar.astro";
 import { Image } from "astro:assets";
-import litechatImage from "../imgs/litechat.png";
-import storyTailorImage from "../imgs/StoryTailor_Desktop_Fluent.png";
-import winQsmImage from "../imgs/WinQSM.png";
-import githubMark from "../imgs/github-mark-white.svg";
-import globeAlt from "../imgs/heroicons-globe-alt.svg";
+import litechatImage from "../../imgs/litechat.png";
+import storyTailorImage from "../../imgs/StoryTailor_Desktop_Fluent.png";
+import winQsmImage from "../../imgs/WinQSM.png";
+import githubMark from "../../imgs/github-mark-white.svg";
+import globeAlt from "../../imgs/heroicons-globe-alt.svg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -16,8 +16,8 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 <Layout>
 	<NavBar />
 	<header>
-		<h1 class="text-6xl md:text-7xl font-bold">Satakun Utama</h1>
-		<p>A student looking for new things and gathering experience.</p>
+		<h1 class="text-6xl md:text-7xl font-bold mb-2">ศตคุณ อุตมะ</h1>
+		<p>นักเรียนที่กำลังมองหาสิ่งใหม่ ๆ และตามหาประสบการณ์</p>
 	</header>
 	<main>
 		<section
@@ -25,26 +25,23 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 lg:grid lg:grid-cols-2"
 		>
 			<div class="flex flex-col justify-center">
-				<h2 class="text-5xl font-bold mb-2" id="aboutMeHeader">
-					About me
-				</h2>
+				<h2 class="mb-2" id="aboutMeHeader">เกี่ยวกับฉัน</h2>
 				<p class="md:text-base text-lg">
-					I'm a student currently studying at the Nongkhai Technical
-					College in Thailand, and I love trying new things! I'm
-					looking to gather experiences in various fields such as
-					graphic design, game development, and web development!
+					ปัจจุบันเป็นนักเรียนที่ศึกษาอยู่ที่วิทยาลัยเทคนิคหนองคาย
+					ฉันเป็นคนชอบลองอะไรใหม่ ๆ และกำลังตามหาประสบการณ์ในหลาย ๆ
+					ด้านเช่น กราฟิกดีไซน์ การพัฒนาเกม และการพัฒนาเว็บไซต์
 				</p>
 			</div>
 		</section>
 		<section id="projects">
-			<h2 class="text-5xl font-bold pb-2">Projects</h2>
+			<h2 class="pb-2">โปรเจกต์</h2>
 			<div id="projectList">
 				<div class="card" id="litechat">
 					<div class="card-content">
 						<h3>litechat</h3>
 						<p>
-							A lightweight and secure chat application.<br />
-							<strong>Related technologies:</strong> Web, PocketBase,
+							แอพลิเคชั่นแชทที่รวดเร็วและปลอดภัย<br />
+							<strong>เทคโนโลยีที่เกี่ยวข้อง:</strong> Web, PocketBase,
 							Mithril.js
 						</p>
 						<div class="card-links">
@@ -85,9 +82,10 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 					<div class="card-content">
 						<h3>StoryTailor</h3>
 						<p>
-							Write stories anywhere. A cross-platform application
-							for writing visual novel stories.<br />
-							<strong>Related technologies:</strong> Flutter, Android,
+							StoryTailor เป็นแอพลิเคชั่นครอสแพลทฟอร์ม
+							สำหรับการเขียนเรื่องราววิชวลโนเวล
+							ให้คุณสามารถเขียนเรื่องราวที่ใดก็ได้<br />
+							<strong>เทคโนโลยีที่เกี่ยวข้อง:</strong> Flutter, Android,
 							PocketBase
 						</p>
 						<div class="card-links">
@@ -116,8 +114,8 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 					<div class="card-content">
 						<h3>QSMSharp</h3>
 						<p>
-							A server management software for Minecraft.<br />
-							<strong>Related technologies:</strong> C#, WinUI
+							ซอฟท์แวร์จัดการเซิร์ฟเวอร์ไมน์คราฟท์<br />
+							<strong>เทคโนโลยีที่เกี่ยวข้อง:</strong> C#, WinUI
 						</p>
 						<div class="card-links">
 							<a
@@ -147,15 +145,15 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 			id="contact"
 			class="bg-gradient-to-bl from-slate-700 to-slate-900 text-slate-50"
 		>
-			<h2 class="text-5xl font-bold mb-4">Contact</h2>
+			<h2 class="mb-4">ติดต่อ</h2>
 			<ul>
 				<li>
-					<strong>Email:</strong> linesofcodes[at]dailitation[dot]xyz
+					<strong>อีเมล:</strong> linesofcodes[at]dailitation[dot]xyz
 					<a
 						href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
 						class="underline"
 					>
-						(PGP/GPG key available)
+						(มีคีย์ PGP/GPG)
 					</a>
 				</li>
 				<li><strong>Discord:</strong> gamecreator</li>
@@ -184,11 +182,11 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 	}
 
 	#projectList {
-		@apply flex flex-col gap-2 lg:px-40;
+		@apply flex flex-col gap-2;
 	}
 
 	#projects {
-		@apply bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50;
+		@apply bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50 xl:px-40;
 	}
 
 	#projects h3 {
@@ -221,7 +219,7 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 	.card-image {
 		z-index: 1;
 		display: none;
-		@apply md:flex items-center xl:w-[600px] md:w-[450px] absolute right-0 translate-y-8 xl:translate-y-0;
+		@apply md:flex items-center lg:w-[600px] md:w-[450px] absolute right-0;
 	}
 
 	.card-links {
@@ -249,5 +247,9 @@ import globeAlt from "../imgs/heroicons-globe-alt.svg";
 		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 		color: transparent;
 		background-clip: text;
+	}
+
+	section h2 {
+		@apply leading-snug text-5xl font-bold;
 	}
 </style>
