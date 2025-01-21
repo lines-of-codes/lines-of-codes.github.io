@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   fill="none"
+   viewBox="0 0 24 24"
+   stroke-width="1.5"
+   stroke="#ffffff"
+   class="size-6"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="heroicons-globe-alt.svg"
+   inkscape:version="1.4 (e7c3feb100, 2024-10-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="24.291667"
+     inkscape:cx="12"
+     inkscape:cy="12"
+     inkscape:window-width="1536"
+     inkscape:window-height="792"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <path
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     d="M 12.020583,23.053569 A 11.03789,11.03789 0 0 0 22.705416,14.782508 M 12.020583,23.053569 A 11.03789,11.03789 0 0 1 1.3357484,14.782508 m 10.6848346,8.271061 c 3.04633,0 5.516492,-4.940326 5.516492,-11.032986 0,-6.0926597 -2.470162,-11.03298562 -5.516492,-11.03298562 m 0,22.06597162 c -3.0463307,0 -5.5164936,-4.940326 -5.5164936,-11.032986 0,-6.0926597 2.4701629,-11.03298562 5.5164936,-11.03298562 m 0,0 A 11.029308,11.029308 0 0 1 21.635216,6.6046131 M 12.020583,0.98759738 A 11.029308,11.029308 0 0 0 2.4059481,6.6046131 m 19.2292679,0 a 14.653032,14.653032 0 0 1 -9.614633,3.5771389 c -3.6752109,0 -7.036594,-1.3484757 -9.6146349,-3.5771389 m 19.2292679,0 a 10.982725,10.982725 0 0 1 1.418353,5.4159699 c 0,0.953741 -0.121363,1.879285 -0.348153,2.761925 m 0,0 a 21.966675,21.966675 0 0 1 -10.684833,2.754568 c -3.8762564,0 -7.5183676,-0.999098 -10.6848346,-2.754568 m 0,0 A 11.051374,11.051374 0 0 1 0.98759642,12.020583 c 0,-1.967549 0.51487268,-3.8161869 1.41835168,-5.4159699"
+     id="path1"
+     style="stroke-width:1.83883" />
+</svg>
