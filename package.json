@@ -10,9 +10,9 @@
     },
     "dependencies": {
         "@astrojs/tailwind": "^5.1.5",
-        "astro": "^5.1.8",
-        "tailwindcss": "^3.4.17",
-        "sharp": "^0.33.5"
+        "astro": "^5.1.9",
+        "sharp": "^0.33.5",
+        "tailwindcss": "^3.4.17"
     },
     "packageManager": "pnpm@10.0.0+sha256.43abf6e720fb7bc53c591b0862605c7d323d0a9d2dd33bcac07b062e13cf4948",
     "pnpm": {

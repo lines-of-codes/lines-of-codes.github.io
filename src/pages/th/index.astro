@@ -8,6 +8,7 @@ import storyTailorImage from "../../imgs/StoryTailor_Desktop_Fluent.png";
 import winQsmImage from "../../imgs/WinQSM.png";
 import githubMark from "../../imgs/github-mark-white.svg";
 import globeAlt from "../../imgs/heroicons-globe-alt.svg";
+import "../../styles/index.css";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -25,10 +26,12 @@ import globeAlt from "../../imgs/heroicons-globe-alt.svg";
 			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 lg:grid lg:grid-cols-2"
 		>
 			<div class="flex flex-col justify-center">
-				<h2 class="mb-2" id="aboutMeHeader">เกี่ยวกับฉัน</h2>
+				<h2 class="mb-2 leading-normal" id="aboutMeHeader">
+					เกี่ยวกับตัวฉัน
+				</h2>
 				<p class="md:text-base text-lg">
 					ปัจจุบันเป็นนักเรียนที่ศึกษาอยู่ที่วิทยาลัยเทคนิคหนองคาย
-					ฉันเป็นคนชอบลองอะไรใหม่ ๆ และกำลังตามหาประสบการณ์ในหลาย ๆ
+					ดิฉันเป็นคนชอบลองอะไรใหม่ ๆ และกำลังตามหาประสบการณ์ในหลาย ๆ
 					ด้านเช่น กราฟิกดีไซน์ การพัฒนาเกม และการพัฒนาเว็บไซต์
 				</p>
 			</div>
@@ -164,92 +167,3 @@ import globeAlt from "../../imgs/heroicons-globe-alt.svg";
 	</main>
 	<Footer />
 </Layout>
-
-<style>
-	header {
-		background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
-		color: whitesmoke;
-		min-height: 90vh;
-		@apply md:px-32 px-16;
-	}
-	header,
-	#frameworks {
-		@apply flex flex-col justify-center;
-	}
-
-	section {
-		@apply xl:px-40 md:px-32 px-14 md:py-24 py-16;
-	}
-
-	#projectList {
-		@apply flex flex-col gap-2;
-	}
-
-	#projects {
-		@apply bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50 xl:px-40;
-	}
-
-	#projects h3 {
-		@apply text-3xl font-semibold;
-	}
-
-	#projects > h2 {
-		background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-		color: transparent;
-		background-clip: text;
-	}
-
-	#projects .card {
-		@apply relative flex justify-between h-full lg:min-h-[350px] md:min-h-[300px];
-	}
-
-	#projects .card-content {
-		z-index: 2;
-		@apply px-6 py-4 transition-colors flex flex-col justify-center relative gap-3 w-full;
-	}
-
-	.card-content p {
-		@apply bg-slate-800 border border-slate-700 px-4 py-2 rounded-lg box-border w-fit lg:max-w-[30vw] md:max-w-[40vw];
-	}
-
-	#litechat .card-image img {
-		transform: translateY(10%);
-	}
-
-	.card-image {
-		z-index: 1;
-		display: none;
-		@apply md:flex items-center lg:w-[600px] md:w-[450px] absolute right-0;
-	}
-
-	.card-links {
-		@apply flex gap-3 md:gap-2;
-	}
-
-	.card-links a:hover img,
-	.card-links a:hover svg {
-		filter: brightness(1);
-	}
-
-	.card-links img,
-	.card-links svg {
-		filter: brightness(80%);
-		transition: filter 250ms;
-	}
-
-	#aboutMeHeader {
-		background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
-		color: transparent;
-		background-clip: text;
-	}
-
-	#contact h2 {
-		background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
-		color: transparent;
-		background-clip: text;
-	}
-
-	section h2 {
-		@apply leading-snug text-5xl font-bold;
-	}
-</style>
