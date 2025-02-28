@@ -10,11 +10,11 @@
     },
     "dependencies": {
         "@astrojs/tailwind": "^5.1.5",
-        "astro": "^5.1.9",
+        "astro": "^5.4.1",
         "sharp": "^0.33.5",
         "tailwindcss": "^3.4.17"
     },
-    "packageManager": "pnpm@10.0.0+sha256.43abf6e720fb7bc53c591b0862605c7d323d0a9d2dd33bcac07b062e13cf4948",
+    "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b",
     "pnpm": {
         "onlyBuiltDependencies": [
             "esbuild"
