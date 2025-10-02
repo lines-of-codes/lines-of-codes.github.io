@@ -1,5 +1,5 @@
 <nav
-	class="fixed bg-gradient-to-b from-slate-700 to-transparent w-full flex gap-4 md:gap-6 justify-center py-4 text-slate-50"
+	class="fixed bg-gradient-to-b from-slate-700 to-transparent w-full flex gap-4 md:gap-6 justify-center py-4 text-slate-50 print:invisible"
 >
 	<a href="#aboutme">About me</a>
 	<a href="#projects">Projects</a>
@@ -8,6 +8,8 @@
 </nav>
 
 <style>
+	@reference "@/styles/index.css";
+
 	a {
 		@apply transition-colors hover:text-orange-300;
 	}

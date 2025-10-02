@@ -9,9 +9,6 @@ import winQsmImage from "../imgs/WinQSM.png";
 import githubMark from "../imgs/github-mark-white.svg";
 import globeAlt from "../imgs/heroicons-globe-alt.svg";
 import "../styles/index.css";
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -20,12 +17,12 @@ import "../styles/index.css";
 		<h1 class="text-6xl md:text-7xl font-bold">Satakun Utama</h1>
 		<p>A student looking for new things and gathering experience.</p>
 	</header>
-	<main>
+	<main class="text-center">
 		<section
 			id="aboutme"
-			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 lg:grid lg:grid-cols-2"
+			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 flex justify-center"
 		>
-			<div class="flex flex-col justify-center">
+			<div class="max-w-1/2 print:max-w-full">
 				<h2 class="mb-2" id="aboutMeHeader">About me</h2>
 				<p class="md:text-base text-lg">
 					I'm a student currently studying at the Nongkhai Technical
@@ -36,108 +33,113 @@ import "../styles/index.css";
 			</div>
 		</section>
 		<section id="projects">
-			<h2 class="pb-2">Projects</h2>
+			<h2 class="pb-2 mb-6">Projects</h2>
 			<div id="projectList">
 				<div class="card" id="litechat">
-					<div class="card-content">
-						<h3>litechat</h3>
-						<p>
-							A lightweight and secure chat application.<br />
-							<strong>Related technologies:</strong> Web, PocketBase,
-							Mithril.js
-						</p>
-						<div class="card-links">
-							<a
-								href="https://github.com/lines-of-codes/litechat"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src={githubMark}
-									alt="GitHub"
-									width="32"
-									height="32"
-								/>
-							</a>
-							<a
-								href="https://litechat.taeyai.com"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src={globeAlt}
-									alt="Web"
-									width="32"
-									height="32"
-								/>
-							</a>
-						</div>
-					</div>
 					<div class="card-image">
 						<Image
 							src={litechatImage}
 							alt="A screenshot of litechat's interface."
 						/>
 					</div>
+					<div class="card-content">
+						<h3>litechat</h3>
+						<p>A lightweight and secure chat application.</p>
+					</div>
+					<div class="tags">
+						<span class="tag">Web</span>
+						<span class="tag">PocketBase</span>
+						<span class="tag">Mithril.js</span>
+					</div>
+					<div class="card-links">
+						<a
+							href="https://github.com/lines-of-codes/litechat"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image
+								src={githubMark}
+								alt="GitHub"
+								width="32"
+								height="32"
+							/>
+						</a>
+						<a
+							href="https://litechat.taeyai.com"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image
+								src={globeAlt}
+								alt="Web"
+								width="32"
+								height="32"
+							/>
+						</a>
+					</div>
 				</div>
 				<div class="card">
-					<div class="card-content">
-						<h3>StoryTailor</h3>
-						<p>
-							Write stories anywhere. A cross-platform application
-							for writing visual novel stories.<br />
-							<strong>Related technologies:</strong> Flutter, Android,
-							PocketBase
-						</p>
-						<div class="card-links">
-							<a
-								href="https://github.com/lines-of-codes/litechat"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								<Image
-									src={githubMark}
-									alt="GitHub"
-									width="32"
-									height="32"
-								/>
-							</a>
-						</div>
-					</div>
 					<div class="card-image">
 						<Image
 							src={storyTailorImage}
 							alt="A screenshot of StoryTailor's interface."
 						/>
 					</div>
+					<div class="card-content">
+						<h3>StoryTailor</h3>
+						<p>
+							Write stories anywhere. A cross-platform application
+							for writing visual novel stories.
+						</p>
+					</div>
+					<div class="tags">
+						<span class="tag">Flutter</span>
+						<span class="tag">Android</span>
+						<span class="tag">PocketBase</span>
+					</div>
+					<div class="card-links">
+						<a
+							href="https://github.com/lines-of-codes/litechat"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<Image
+								src={githubMark}
+								alt="GitHub"
+								width="32"
+								height="32"
+							/>
+						</a>
+					</div>
 				</div>
 				<div class="card">
-					<div class="card-content">
-						<h3>QSMSharp</h3>
-						<p>
-							A server management software for Minecraft.<br />
-							<strong>Related technologies:</strong> C#, WinUI
-						</p>
-						<div class="card-links">
-							<a
-								href="https://github.com/lines-of-codes/QSMSharp"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
-								<Image
-									src={githubMark}
-									alt="GitHub"
-									width="32"
-									height="32"
-								/>
-							</a>
-						</div>
-					</div>
 					<div class="card-image">
 						<Image
 							src={winQsmImage}
 							alt="A screenshot of WinQSM's interface."
 						/>
+					</div>
+					<div class="card-content">
+						<h3>QSMSharp</h3>
+						<p>A server management software for Minecraft.</p>
+					</div>
+					<div class="tags">
+						<span class="tag">C#</span>
+						<span class="tag">WinUI</span>
+					</div>
+					<div class="card-links">
+						<a
+							href="https://github.com/lines-of-codes/QSMSharp"
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							<Image
+								src={githubMark}
+								alt="GitHub"
+								width="32"
+								height="32"
+							/>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -147,20 +149,23 @@ import "../styles/index.css";
 			class="bg-gradient-to-bl from-slate-700 to-slate-900 text-slate-50"
 		>
 			<h2 class="mb-4">Contact</h2>
-			<ul>
-				<li>
-					<strong>Email:</strong> linesofcodes[at]dailitation[dot]xyz
-					<a
+			<div class="grid grid-cols-[1fr_2fr] gap-x-4">
+				<div class="font-bold text-right">Email</div>
+				<div class="text-left">
+					linesofcodes[at]dailitation[dot]xyz <a
 						href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
 						class="underline"
 					>
 						(PGP/GPG key available)
 					</a>
-				</li>
-				<li><strong>Discord:</strong> gamecreator</li>
-				<li><strong>Instagram:</strong> satakun.utama</li>
-				<li><strong>Bluesky:</strong> @linesofcodes.bsky.social</li>
-			</ul>
+				</div>
+				<div class="font-bold text-right">Discord</div>
+				<div class="text-left">gamecreator</div>
+				<div class="font-bold text-right">Instagram</div>
+				<div class="text-left">satakun.utama</div>
+				<div class="font-bold text-right">Bluesky</div>
+				<div class="text-left">@linesofcodes.bsky.social</div>
+			</div>
 		</section>
 	</main>
 	<Footer />

@@ -9,10 +9,10 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/tailwind": "^5.1.5",
+        "@tailwindcss/vite": "^4.1.14",
         "astro": "^5.14.1",
         "sharp": "^0.33.5",
-        "tailwindcss": "^3.4.18"
+        "tailwindcss": "^4.1.14"
     },
     "packageManager": "pnpm@10.17.1+sha512.17c560fca4867ae9473a3899ad84a88334914f379be46d455cbf92e5cf4b39d34985d452d2583baf19967fa76cb5c17bc9e245529d0b98745721aa7200ecaf7a",
     "pnpm": {
@@ -20,5 +20,8 @@
             "esbuild",
             "sharp"
         ]
+    },
+    "devDependencies": {
+        "@types/node": "^24.6.2"
     }
 }

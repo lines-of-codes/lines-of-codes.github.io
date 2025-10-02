@@ -1,14 +1,27 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from "@tailwindcss/vite";
+import { fileURLToPath } from 'node:url';
 
 // https://astro.build/config
 export default defineConfig({
     site: "https://lines-of-codes.github.io",
+
     i18n: {
         locales: ["en", "th"],
         defaultLocale: "en"
     },
-    integrations: [tailwind()]
+
+    integrations: [],
+
+    vite: {
+        // @ts-ignore
+        plugins: [tailwindcss()],
+        resolve: {
+            alias: {
+                "@": fileURLToPath(new URL("./src", import.meta.url)),
+            }
+        }
+    }
 });
