@@ -9,6 +9,11 @@ import winQsmImage from "../imgs/WinQSM.png";
 import githubMark from "../imgs/github-mark-white.svg";
 import globeAlt from "../imgs/heroicons-globe-alt.svg";
 import "../styles/index.css";
+import { getCollection } from "astro:content";
+
+const blogPosts = (await getCollection("blog")).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
 ---
 
 <Layout>
@@ -166,6 +171,29 @@ import "../styles/index.css";
 				<div class="font-bold text-right">Bluesky</div>
 				<div class="text-left">@linesofcodes.bsky.social</div>
 			</div>
+		</section>
+		<section
+			class="bg-gradient-to-br from-slate-900 to-gray-950 text-slate-50"
+			id="blog"
+		>
+			<h2 class="mb-4">Blog</h2>
+			<div class="lg:px-[20vw]">
+                <ul class="flex flex-col gap-2 text-left">
+                    {
+                        blogPosts.map((post) => (
+                            <li>
+                                <a
+                                    href={`/blog/${post.id}`}
+                                    class="px-4 py-2 border border-slate-700 hover:border-slate-800 hover:bg-slate-900 transition-colors rounded block"
+                                >
+                                    <strong>{post.data.title}</strong>
+                                    <span class="block text-slate-400">Published on {post.data.date.toISOString().split("T")[0]}</span>
+                                </a>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
 		</section>
 	</main>
 	<Footer />

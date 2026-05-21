@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @import "./inter.css";
 
 @theme {
 	--font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", "Cascadia Code", ui-monospace, monospace;
 	--font-display: InterDisplay, var(--font-sans);
 }
 

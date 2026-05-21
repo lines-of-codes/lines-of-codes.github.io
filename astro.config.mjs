@@ -4,6 +4,8 @@ import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath } from 'node:url';
 
+import mdx from "@astrojs/mdx";
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://lines-of-codes.github.io",
@@ -13,7 +15,7 @@ export default defineConfig({
         defaultLocale: "en"
     },
 
-    integrations: [],
+    integrations: [mdx()],
 
     vite: {
         // @ts-ignore

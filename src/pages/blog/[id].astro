@@ -1,0 +1,46 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import type { GetStaticPaths } from "astro";
+import { render } from "astro:content";
+import { getCollection } from "astro:content";
+import "@/styles/index.css";
+import Footer from "@/components/Footer.astro";
+
+export const getStaticPaths = (async () => {
+	const posts = await getCollection("blog");
+
+	return posts.map((post) => ({
+		params: { id: post.id },
+		props: { post },
+	}));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout>
+	<nav
+		class="fixed bg-gradient-to-b from-slate-800 to-transparent w-full flex justify-center text-slate-50 py-4"
+	>
+		<a href="/" class="font-mono hover:text-orange-300 transition-colors">linesofcodes</a>
+	</nav>
+	<article
+		class="text-slate-50 py-[12vh] min-h-screen bg-linear-to-b from-slate-700 to-slate-950"
+	>
+		<div class="max-w-[50vw] mx-auto">
+			<hgroup class="mb-6">
+				<h1 class="text-4xl font-bold">{post.data.title}</h1>
+				<p class="text-slate-400">
+					Published on {post.data.date.toISOString().split("T")[0]}
+				</p>
+			</hgroup>
+			<div
+				class="prose prose-invert prose-slate prose-figure:text-center prose-figure:flex prose-figure:flex-col prose-figure:items-center"
+			>
+				<Content />
+			</div>
+		</div>
+	</article>
+	<Footer />
+</Layout>
