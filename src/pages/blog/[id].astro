@@ -21,14 +21,14 @@ const { Content } = await render(post);
 
 <Layout>
 	<nav
-		class="fixed bg-gradient-to-b from-slate-800 to-transparent w-full flex justify-center text-slate-50 py-4"
+		class="fixed bg-linear-to-b from-slate-800 to-transparent w-full flex justify-center text-slate-50 py-4"
 	>
 		<a href="/" class="font-mono hover:text-orange-300 transition-colors">linesofcodes</a>
 	</nav>
 	<article
 		class="text-slate-50 py-[12vh] min-h-screen bg-linear-to-b from-slate-700 to-slate-950"
 	>
-		<div class="max-w-[50vw] mx-auto">
+		<div class="lg:max-w-[50vw] max-w-[85vw] mx-auto">
 			<hgroup class="mb-6">
 				<h1 class="text-4xl font-bold">{post.data.title}</h1>
 				<p class="text-slate-400">
