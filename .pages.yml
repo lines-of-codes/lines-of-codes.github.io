@@ -1,0 +1,15 @@
+media: src/assets/blog
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/data/blog
+    fields:
+      - name: title
+        type: string
+      - name: date
+        type: date
+      - name: lang
+        type: string
+      - name: body
+        type: rich-text
