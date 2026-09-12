@@ -9,15 +9,15 @@
         "astro": "astro"
     },
     "dependencies": {
-        "@astrojs/mdx": "^7.0.3",
+        "@astrojs/mdx": "^8.0.1",
         "@tailwindcss/typography": "^0.5.20",
         "@tailwindcss/vite": "^4.3.3",
-        "astro": "^7.1.1",
-        "sharp": "^0.35.3",
+        "astro": "^7.3.2",
+        "sharp": "^0.35.4",
         "tailwindcss": "^4.3.3"
     },
-    "packageManager": "pnpm@11.14.0+sha512.66c1ac4c7d4762d6d7dde44c7f3e5a73591ed0a0806e751d4ed32d4f004f25b2285a906b1fd8a9e3e621df3b4e2858bf88e50e0cf626bedbe977fe434a5caf85",
+    "packageManager": "pnpm@12.4.1+sha512.2e81e399d73fe8390dab25e06aa788ab7a5908248d2f5a370f82b481147a6a7a367bf8048f9a6fdb6460f21a66f0542dedb8b94ca2c8723596741920b1656d4c",
     "devDependencies": {
-        "@types/node": "^26.1.1"
+        "@types/node": "^26.5.1"
     }
 }

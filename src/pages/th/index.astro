@@ -18,14 +18,19 @@ import "@/styles/index.css";
             ศตคุณ อุตมะ
         </h1>
         <p>นักเรียนที่กำลังมองหาสิ่งใหม่ ๆ และตามหาประสบการณ์</p>
+        <p class="text-gray-300 italic absolute left-1/2 md:left-12 bottom-18 md:bottom-24 max-md:w-full max-md:-translate-x-1/2 -translate-y-1/2 md:text-left">
+            Black Stone Park, Helsinki, Finland. สงวนลิขสิทธิ์
+        </p>
     </header>
     <main class="text-center">
         <section
             id="aboutme"
             class="bg-linear-to-tr from-slate-900 to-slate-700 text-slate-50 flex justify-center"
         >
-            <div class="max-w-1/2 print:max-w-full">
-                <h2 class="leading-22" id="aboutMeHeader">เกี่ยวกับตัวฉัน</h2>
+            <div class="max-w-2/3 md:max-w-1/2 print:max-w-full">
+                <h2 class="leading-14 pt-4" id="aboutMeHeader">
+                    เกี่ยวกับตัวฉัน
+                </h2>
                 <p class="md:text-base text-lg">
                     ปัจจุบันเป็นนักเรียนที่ศึกษาอยู่ที่วิทยาลัยเทคนิคหนองคาย
                     ดิฉันเป็นคนชอบลองอะไรใหม่ ๆ และกำลังตามหาประสบการณ์ในหลาย ๆ
@@ -34,13 +39,17 @@ import "@/styles/index.css";
             </div>
         </section>
         <section id="projects">
-            <h2 class="pb-2 leading-18">โปรเจกต์</h2>
+            <h2 class="pb-2 pt-1 leading-14">โปรเจกต์</h2>
+            <p class="mb-6">
+                โปรเจกต์ทั้งหมดต่อไปนี้เป็นโปรเจกต์ open-source
+                ภายใต้สัญญาอนุญาต GNU General Public License v3
+            </p>
             <div id="projectList">
                 <div class="card" id="litechat">
                     <div class="card-image">
                         <Image
                             src={litechatImage}
-                            alt="A screenshot of litechat's interface."
+                            alt="ส่วนติดต่อผู้ใช้ litechat"
                         />
                     </div>
                     <div class="card-content">
@@ -66,7 +75,7 @@ import "@/styles/index.css";
                             />
                         </a>
                         <a
-                            href="https://litechat.taeyai.com"
+                            href="https://litechat.dailitation.xyz"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -89,8 +98,9 @@ import "@/styles/index.css";
                     <div class="card-content">
                         <h3>StoryTailor</h3>
                         <p>
-                            StoryTailor เป็นแอพลิเคชั่น cross-platform
+                            แอพลิเคชั่น cross-platform
                             สำหรับการเขียนเรื่องราววิชวลโนเวล
+                            <br />
                             ให้คุณสามารถเขียนเรื่องราวที่ใดก็ได้
                         </p>
                     </div>
@@ -101,7 +111,7 @@ import "@/styles/index.css";
                     </div>
                     <div class="card-links">
                         <a
-                            href="https://github.com/lines-of-codes/litechat"
+                            href="https://github.com/StablerCharacter/StoryTailor"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -123,7 +133,7 @@ import "@/styles/index.css";
                     </div>
                     <div class="card-content">
                         <h3>QSMSharp</h3>
-                        <p>ซอฟท์แวร์จัดการเซิร์ฟเวอร์ Minecraft</p>
+                        <p>ซอฟต์แวร์จัดการเซิร์ฟเวอร์ Minecraft</p>
                     </div>
                     <div class="tags">
                         <span class="tag">C#</span>
@@ -146,15 +156,64 @@ import "@/styles/index.css";
                 </div>
             </div>
         </section>
+        <section id="contributions">
+            <h2 class="leading-14 mb-2">การมีส่วนร่วม</h2>
+            <p>ต่อไปนี้คือการมีส่วนร่วมในโปรเจกต์สาธารณะของดิฉันบางส่วน</p>
+            <ul class="lg:px-[20vw] mt-4 flex flex-col gap-2">
+                <li>
+                    <a
+                        href="https://invent.kde.org/plasma/kinfocenter/-/merge_requests/303"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>KDE KInfoCenter</strong> หน้าแสดงข้อมูล VA-API
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://jrsoftware.org/files/istrans/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>Inno Setup</strong>{" "}
+                        การแปลเป็นภาษาไทยอย่างเป็นทางการ
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/withastro/starlight/pull/3663"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>Astro Starlight</strong>{" "}
+                        การแปลภาษาส่วนติดต่อผู้ใช้
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/Xerusion/kde-l10n-th/pulls?q=is%3Apr+author%3Alines-of-codes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>KDE Applications</strong> การแปลเป็นภาษาไทย
+                    </a>
+                </li>
+            </ul>
+        </section>
         <section
             id="contact"
-            class="bg-gradient-to-bl from-slate-700 to-slate-900 text-slate-50"
+            class="bg-linear-to-tl from-slate-700 to-slate-900 text-slate-50"
         >
             <h2 class="leading-16 mb-2">ติดต่อ</h2>
             <div class="grid grid-cols-[1fr_2fr] gap-x-4">
                 <div class="font-bold text-right">Email</div>
                 <div class="text-left">
-                    linesofcodes[at]dailitation[dot]xyz <a
+                    linesofcodes[at]dailitation[dot]xyz{" "}
+                    <a
                         href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
                         class="underline"
                     >

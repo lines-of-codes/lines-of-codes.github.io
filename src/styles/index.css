@@ -29,7 +29,9 @@ h3 {
 }
 
 header {
-    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    background:
+        center / cover no-repeat url("/imgs/BlackStonePark.avif"),
+        linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: whitesmoke;
     min-height: 90vh;
     @apply md:px-32 px-16 flex flex-col justify-center text-center print:h-screen print:text-black;
@@ -44,7 +46,7 @@ section h2 {
 }
 
 #projectList {
-    @apply flex flex-col gap-8 lg:px-40 print:gap-0;
+    @apply flex flex-wrap justify-center gap-8 print:gap-0;
 }
 
 #projects {
@@ -56,7 +58,25 @@ section h2 {
 }
 
 #projects > h2 {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    background-image: linear-gradient(
+        120deg,
+        var(--color-fuchsia-300) 0%,
+        var(--color-violet-600) 100%
+    );
+    color: transparent;
+    background-clip: text;
+}
+
+#contributions {
+    @apply bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50;
+}
+
+#contributions > h2 {
+    background-image: linear-gradient(
+        45deg,
+        var(--color-violet-600),
+        var(--color-emerald-400)
+    );
     color: transparent;
     background-clip: text;
 }
@@ -70,7 +90,11 @@ section h2 {
 }
 
 .card-image {
-    @apply md:flex items-center xl:w-[600px] md:w-[450px];
+    @apply md:flex items-center;
+}
+
+.card-image > img {
+    @apply md:h-[250px] w-auto;
 }
 
 .card-links {
@@ -107,4 +131,8 @@ section h2 {
     background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     color: transparent;
     background-clip: text;
+}
+
+.link-card {
+    @apply px-4 py-2 border border-slate-700 hover:border-slate-800 hover:bg-slate-900 transition-colors rounded block;
 }

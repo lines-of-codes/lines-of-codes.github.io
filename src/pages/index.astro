@@ -12,189 +12,247 @@ import "../styles/index.css";
 import { getCollection } from "astro:content";
 
 const blogPosts = (await getCollection("blog")).sort(
-	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 ---
 
 <Layout>
-	<NavBar />
-	<header>
-		<h1 class="text-6xl md:text-7xl font-bold">Satakun Utama</h1>
-		<p>A student looking for new things and gathering experience.</p>
-	</header>
-	<main class="text-center">
-		<section
-			id="aboutme"
-			class="bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50 flex justify-center"
-		>
-			<div class="max-w-1/2 print:max-w-full">
-				<h2 class="mb-2" id="aboutMeHeader">About me</h2>
-				<p class="md:text-base text-lg">
-					I'm a student currently studying at the Nongkhai Technical
-					College in Thailand, and I love trying new things! I'm
-					looking to gather experiences in various fields such as
-					graphic design, game development, and web development!
-				</p>
-			</div>
-		</section>
-		<section id="projects">
-			<h2 class="pb-2 mb-6">Projects</h2>
-			<div id="projectList">
-				<div class="card" id="litechat">
-					<div class="card-image">
-						<Image
-							src={litechatImage}
-							alt="A screenshot of litechat's interface."
-						/>
-					</div>
-					<div class="card-content">
-						<h3>litechat</h3>
-						<p>A lightweight and secure chat application.</p>
-					</div>
-					<div class="tags">
-						<span class="tag">Web</span>
-						<span class="tag">PocketBase</span>
-						<span class="tag">Mithril.js</span>
-					</div>
-					<div class="card-links">
-						<a
-							href="https://github.com/lines-of-codes/litechat"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Image
-								src={githubMark}
-								alt="GitHub"
-								width="32"
-								height="32"
-							/>
-						</a>
-						<a
-							href="https://litechat.taeyai.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Image
-								src={globeAlt}
-								alt="Web"
-								width="32"
-								height="32"
-							/>
-						</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-image">
-						<Image
-							src={storyTailorImage}
-							alt="A screenshot of StoryTailor's interface."
-						/>
-					</div>
-					<div class="card-content">
-						<h3>StoryTailor</h3>
-						<p>
-							Write stories anywhere. A cross-platform application
-							for writing visual novel stories.
-						</p>
-					</div>
-					<div class="tags">
-						<span class="tag">Flutter</span>
-						<span class="tag">Android</span>
-						<span class="tag">PocketBase</span>
-					</div>
-					<div class="card-links">
-						<a
-							href="https://github.com/lines-of-codes/litechat"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<Image
-								src={githubMark}
-								alt="GitHub"
-								width="32"
-								height="32"
-							/>
-						</a>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-image">
-						<Image
-							src={winQsmImage}
-							alt="A screenshot of WinQSM's interface."
-						/>
-					</div>
-					<div class="card-content">
-						<h3>QSMSharp</h3>
-						<p>A server management software for Minecraft.</p>
-					</div>
-					<div class="tags">
-						<span class="tag">C#</span>
-						<span class="tag">WinUI</span>
-					</div>
-					<div class="card-links">
-						<a
-							href="https://github.com/lines-of-codes/QSMSharp"
-							target="_blank"
-							rel="noreferrer noopener"
-						>
-							<Image
-								src={githubMark}
-								alt="GitHub"
-								width="32"
-								height="32"
-							/>
-						</a>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section
-			id="contact"
-			class="bg-gradient-to-bl from-slate-700 to-slate-900 text-slate-50"
-		>
-			<h2 class="mb-4">Contact</h2>
-			<div class="grid grid-cols-[1fr_2fr] gap-x-4">
-				<div class="font-bold text-right">Email</div>
-				<div class="text-left">
-					linesofcodes[at]dailitation[dot]xyz <a
-						href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
-						class="underline"
-					>
-						(PGP/GPG key available)
-					</a>
-				</div>
-				<div class="font-bold text-right">Discord</div>
-				<div class="text-left">gamecreator</div>
-				<div class="font-bold text-right">Instagram</div>
-				<div class="text-left">satakun.utama</div>
-				<div class="font-bold text-right">Bluesky</div>
-				<div class="text-left">@linesofcodes.bsky.social</div>
-			</div>
-		</section>
-		<section
-			class="bg-gradient-to-br from-slate-900 to-gray-950 text-slate-50"
-			id="blog"
-		>
-			<h2 class="mb-4">Blog</h2>
-			<div class="lg:px-[20vw]">
+    <NavBar />
+    <header>
+        <h1 class="text-6xl md:text-7xl font-bold">Satakun Utama</h1>
+        <p>A student looking for new things and gathering experience.</p>
+        <p class="text-gray-300 italic absolute left-1/2 md:left-12 bottom-18 md:bottom-24 max-md:w-full max-md:-translate-x-1/2 -translate-y-1/2 md:text-left">
+            Black Stone Park, Helsinki, Finland.
+            <br />
+            Taken by me, All rights reserved.
+        </p>
+    </header>
+    <main class="text-center">
+        <section
+            id="aboutme"
+            class="bg-linear-to-tr from-slate-900 to-slate-700 text-slate-50 flex justify-center"
+        >
+            <div class="md:max-w-1/2 print:max-w-full">
+                <h2 class="mb-2" id="aboutMeHeader">
+                    About me
+                </h2>
+                <p class="md:text-base text-lg">
+                    I'm a student currently studying at the Nongkhai Technical
+                    College in Thailand, and I love trying new things! I'm
+                    looking to gather experiences in various fields such as
+                    graphic design, game development, and web development!
+                </p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2 class="pb-2 mb-2">Projects</h2>
+            <p class="mb-6">
+                All of these are open-source projects licensed under GNU General
+                Public License v3
+            </p>
+            <div id="projectList">
+                <div class="card" id="litechat">
+                    <div class="card-image">
+                        <Image
+                            src={litechatImage}
+                            alt="A screenshot of litechat's interface."
+                        />
+                    </div>
+                    <div class="card-content">
+                        <h3>litechat</h3>
+                        <p>A lightweight and secure chat application.</p>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Web</span>
+                        <span class="tag">PocketBase</span>
+                        <span class="tag">Mithril.js</span>
+                    </div>
+                    <div class="card-links">
+                        <a
+                            href="https://github.com/lines-of-codes/litechat"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src={githubMark}
+                                alt="GitHub"
+                                width="32"
+                                height="32"
+                            />
+                        </a>
+                        <a
+                            href="https://litechat.dailitation.xyz"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src={globeAlt}
+                                alt="Web"
+                                width="32"
+                                height="32"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <Image
+                            src={storyTailorImage}
+                            alt="A screenshot of StoryTailor's interface."
+                        />
+                    </div>
+                    <div class="card-content">
+                        <h3>StoryTailor</h3>
+                        <p>
+                            Write stories anywhere. A cross-platform application
+                            <br />
+                            for writing visual novel stories.
+                        </p>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">PocketBase</span>
+                    </div>
+                    <div class="card-links">
+                        <a
+                            href="https://github.com/StablerCharacter/StoryTailor"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Image
+                                src={githubMark}
+                                alt="GitHub"
+                                width="32"
+                                height="32"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image">
+                        <Image
+                            src={winQsmImage}
+                            alt="A screenshot of WinQSM's interface."
+                        />
+                    </div>
+                    <div class="card-content">
+                        <h3>QSMSharp</h3>
+                        <p>A server management software for Minecraft.</p>
+                    </div>
+                    <div class="tags">
+                        <span class="tag">C#</span>
+                        <span class="tag">WinUI</span>
+                    </div>
+                    <div class="card-links">
+                        <a
+                            href="https://github.com/lines-of-codes/QSMSharp"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                        >
+                            <Image
+                                src={githubMark}
+                                alt="GitHub"
+                                width="32"
+                                height="32"
+                            />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contributions">
+            <h2 class="mb-2">Contributions</h2>
+            <p>Here are some of my open-source contributions</p>
+            <ul class="lg:px-[20vw] mt-4 flex flex-col gap-2">
+                <li>
+                    <a
+                        href="https://invent.kde.org/plasma/kinfocenter/-/merge_requests/303"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>KDE KInfoCenter</strong> VA-API Information Page
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://jrsoftware.org/files/istrans/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>Inno Setup</strong> Official Thai Translation
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/withastro/starlight/pull/3663"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>Astro Starlight</strong> Thai Interface
+                        Translation
+                    </a>
+                </li>
+                <li>
+                    <a
+                        href="https://github.com/Xerusion/kde-l10n-th/pulls?q=is%3Apr+author%3Alines-of-codes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link-card"
+                    >
+                        <strong>KDE Applications</strong> Thai translation
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section
+            id="contact"
+            class="bg-linear-to-tl from-slate-700 to-slate-900 text-slate-50"
+        >
+            <h2 class="mb-4">Contact</h2>
+            <div class="grid grid-cols-[1fr_2fr] gap-x-4">
+                <div class="font-bold text-right">Email</div>
+                <div class="text-left">
+                    linesofcodes[at]dailitation[dot]xyz{" "}
+                    <a
+                        href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
+                        class="underline"
+                    >
+                        (PGP/GPG key available)
+                    </a>
+                </div>
+                <div class="font-bold text-right">Discord</div>
+                <div class="text-left">gamecreator</div>
+                <div class="font-bold text-right">Instagram</div>
+                <div class="text-left">satakun.utama</div>
+                <div class="font-bold text-right">Bluesky</div>
+                <div class="text-left">@linesofcodes.bsky.social</div>
+            </div>
+        </section>
+        <section
+            class="bg-linear-to-br from-slate-900 to-gray-950 text-slate-50"
+            id="blog"
+        >
+            <h2 class="mb-4">Blog</h2>
+            <div class="lg:px-[20vw]">
                 <ul class="flex flex-col gap-2 text-left">
-                    {
-                        blogPosts.map((post) => (
-                            <li>
-                                <a
-                                    href={`/blog/${post.id}`}
-                                    class="px-4 py-2 border border-slate-700 hover:border-slate-800 hover:bg-slate-900 transition-colors rounded block"
-                                >
-                                    <strong>{post.data.title}</strong>
-                                    <span class="block text-slate-400">Published on {post.data.date.toISOString().split("T")[0]}</span>
-                                </a>
-                            </li>
-                        ))
-                    }
+                    {blogPosts.map((post) => (
+                        <li>
+                            <a href={`/blog/${post.id}`} class="link-card">
+                                <strong>{post.data.title}</strong>
+                                <span class="block text-slate-400">
+                                    Published on{" "}
+                                    {post.data.date.toISOString().split("T")[0]}
+                                </span>
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
-		</section>
-	</main>
-	<Footer />
+        </section>
+    </main>
+    <Footer />
 </Layout>
