@@ -17,7 +17,11 @@
     }
 }
 
-* {
+body {
+    @apply text-slate-50 bg-slate-900 print:bg-white!;
+}
+
+main {
     @apply print:text-black!;
 }
 
@@ -34,11 +38,15 @@ header {
         linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     color: whitesmoke;
     min-height: 90vh;
-    @apply md:px-32 px-16 flex flex-col justify-center text-center print:h-screen print:text-black;
+    @apply md:px-32 px-16 flex flex-col justify-center text-center print:h-screen;
+}
+
+header > h1 {
+    @apply print:text-[whitesmoke]!;
 }
 
 section {
-    @apply xl:px-40 md:px-32 px-14 md:py-24 py-16 print:py-8;
+    @apply xl:px-40 md:px-32 px-14 md:py-24 py-16 print:py-8 print:bg-none!;
 }
 
 section h2 {
@@ -50,7 +58,7 @@ section h2 {
 }
 
 #projects {
-    @apply bg-gradient-to-br from-slate-900 to-slate-700 text-slate-50;
+    @apply bg-linear-to-br from-slate-900 to-slate-700;
 }
 
 #projects h3 {
@@ -68,7 +76,7 @@ section h2 {
 }
 
 #contributions {
-    @apply bg-gradient-to-tr from-slate-900 to-slate-700 text-slate-50;
+    @apply bg-linear-to-tr from-slate-900 to-slate-700;
 }
 
 #contributions > h2 {
@@ -79,6 +87,10 @@ section h2 {
     );
     color: transparent;
     background-clip: text;
+}
+
+#blog {
+    @apply print:hidden;
 }
 
 .card {
@@ -94,7 +106,7 @@ section h2 {
 }
 
 .card-image > img {
-    @apply md:h-[250px] w-auto;
+    @apply md:h-62.5 w-auto;
 }
 
 .card-links {
@@ -113,7 +125,7 @@ section h2 {
 }
 
 .tag {
-    @apply bg-slate-800 border border-slate-500 px-2 py-1 rounded;
+    @apply bg-slate-800 border border-slate-500 px-2 py-1 rounded print:bg-transparent;
 }
 
 .tags {

@@ -1,39 +1,37 @@
-<nav
-	class="fixed bg-gradient-to-b from-slate-700 to-transparent w-full flex gap-4 md:gap-6 justify-center py-4 text-slate-50 print:invisible"
->
-	<a href="#aboutme">About me</a>
-	<a href="#projects">Projects</a>
-	<a href="#contact">Contact</a>
+<nav class="fixed bg-linear-to-b from-slate-700 to-transparent w-full flex gap-4 md:gap-6 justify-center py-4 text-slate-50 print:invisible">
+    <a href="#aboutme">About me</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
     <a href="#blog">Blog</a>
-	<a href="/th/">TH</a>
+    <a href="/th/">TH</a>
 </nav>
 
 <style>
-	@reference "@/styles/index.css";
+    @reference "@/styles/index.css";
 
-	a {
-		@apply transition-colors hover:text-orange-300;
-	}
+    a {
+        @apply transition-colors hover:text-orange-300;
+    }
 
-	nav {
-		z-index: 3;
-	}
+    nav {
+        z-index: 3;
+    }
 </style>
 
 <script defer>
-	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-		anchor.addEventListener("click", function (e) {
-			e.preventDefault();
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
 
-			const href = anchor.getAttribute("href");
-			if (href === null) return;
+            const href = anchor.getAttribute("href");
+            if (href === null) return;
 
-			const target = document.querySelector(href);
-			if (target === null) return;
+            const target = document.querySelector(href);
+            if (target === null) return;
 
-			target.scrollIntoView({
-				behavior: "smooth",
-			});
-		});
-	});
+            target.scrollIntoView({
+                behavior: "smooth",
+            });
+        });
+    });
 </script>

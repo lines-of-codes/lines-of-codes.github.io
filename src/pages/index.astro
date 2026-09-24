@@ -30,9 +30,9 @@ const blogPosts = (await getCollection("blog")).sort(
     <main class="text-center">
         <section
             id="aboutme"
-            class="bg-linear-to-tr from-slate-900 to-slate-700 text-slate-50 flex justify-center"
+            class="bg-linear-to-tr from-slate-900 to-slate-700 flex justify-center"
         >
-            <div class="md:max-w-1/2 print:max-w-full">
+            <div class="md:max-w-3/4 print:max-w-full">
                 <h2 class="mb-2" id="aboutMeHeader">
                     About me
                 </h2>
@@ -210,7 +210,7 @@ const blogPosts = (await getCollection("blog")).sort(
         </section>
         <section
             id="contact"
-            class="bg-linear-to-tl from-slate-700 to-slate-900 text-slate-50"
+            class="bg-linear-to-tl from-slate-700 to-slate-900"
         >
             <h2 class="mb-4">Contact</h2>
             <div class="grid grid-cols-[1fr_2fr] gap-x-4">
@@ -219,7 +219,7 @@ const blogPosts = (await getCollection("blog")).sort(
                     linesofcodes[at]dailitation[dot]xyz{" "}
                     <a
                         href="https://keys.openpgp.org/vks/v1/by-fingerprint/8A487B532BEF7B324339AC1CFBE9E5E346F3DDE8"
-                        class="underline"
+                        class="underline print:hidden"
                     >
                         (PGP/GPG key available)
                     </a>
@@ -232,12 +232,9 @@ const blogPosts = (await getCollection("blog")).sort(
                 <div class="text-left">@linesofcodes.bsky.social</div>
             </div>
         </section>
-        <section
-            class="bg-linear-to-br from-slate-900 to-gray-950 text-slate-50"
-            id="blog"
-        >
-            <h2 class="mb-4">Blog</h2>
-            <div class="lg:px-[20vw]">
+        <section class="bg-linear-to-br from-slate-900 to-gray-950" id="blog">
+            <h2>Blog</h2>
+            <div class="lg:px-[20vw] my-4">
                 <ul class="flex flex-col gap-2 text-left">
                     {blogPosts.map((post) => (
                         <li>
@@ -252,6 +249,12 @@ const blogPosts = (await getCollection("blog")).sort(
                     ))}
                 </ul>
             </div>
+            <a
+                href="/rss.xml"
+                class="underline text-slate-300 transition-colors hover:text-slate-100"
+            >
+                RSS feed
+            </a>
         </section>
     </main>
     <Footer />
