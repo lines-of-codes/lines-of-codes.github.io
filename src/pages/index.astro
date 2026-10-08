@@ -71,7 +71,7 @@ const blogPosts = (await getCollection("blog")).sort(
                         <a
                             href="https://github.com/lines-of-codes/litechat"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noreferrer"
                         >
                             <Image
                                 src={githubMark}
@@ -83,7 +83,7 @@ const blogPosts = (await getCollection("blog")).sort(
                         <a
                             href="https://litechat.dailitation.xyz"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noreferrer"
                         >
                             <Image
                                 src={globeAlt}
@@ -118,7 +118,7 @@ const blogPosts = (await getCollection("blog")).sort(
                         <a
                             href="https://github.com/StablerCharacter/StoryTailor"
                             target="_blank"
-                            rel="noopener noreferrer"
+                            rel="noreferrer"
                         >
                             <Image
                                 src={githubMark}
@@ -148,11 +148,23 @@ const blogPosts = (await getCollection("blog")).sort(
                         <a
                             href="https://github.com/lines-of-codes/QSMSharp"
                             target="_blank"
-                            rel="noreferrer noopener"
+                            rel="noreferrer"
                         >
                             <Image
                                 src={githubMark}
                                 alt="GitHub"
+                                width="32"
+                                height="32"
+                            />
+                        </a>
+                        <a
+                            href="https://linesofcodes.dailitation.xyz/QSMSharp/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Image
+                                src={globeAlt}
+                                alt="Web"
                                 width="32"
                                 height="32"
                             />
@@ -169,7 +181,7 @@ const blogPosts = (await getCollection("blog")).sort(
                     <a
                         href="https://invent.kde.org/plasma/kinfocenter/-/merge_requests/303"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         class="link-card"
                     >
                         <strong>KDE KInfoCenter</strong> VA-API Information Page
@@ -179,7 +191,7 @@ const blogPosts = (await getCollection("blog")).sort(
                     <a
                         href="https://jrsoftware.org/files/istrans/"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         class="link-card"
                     >
                         <strong>Inno Setup</strong> Official Thai Translation
@@ -189,7 +201,7 @@ const blogPosts = (await getCollection("blog")).sort(
                     <a
                         href="https://github.com/withastro/starlight/pull/3663"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         class="link-card"
                     >
                         <strong>Astro Starlight</strong> Thai Interface
@@ -200,7 +212,7 @@ const blogPosts = (await getCollection("blog")).sort(
                     <a
                         href="https://github.com/Xerusion/kde-l10n-th/pulls?q=is%3Apr+author%3Alines-of-codes"
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noreferrer"
                         class="link-card"
                     >
                         <strong>KDE Applications</strong> Thai translation
@@ -227,9 +239,17 @@ const blogPosts = (await getCollection("blog")).sort(
                 <div class="font-bold text-right">Discord</div>
                 <div class="text-left">gamecreator</div>
                 <div class="font-bold text-right">Instagram</div>
-                <div class="text-left">satakun.utama</div>
+                <div class="text-left">
+                  <a href="https://www.instagram.com/satakun.utama/" target="_blank" rel="noreferrer" class="underline print:no-underline">
+                    satakun.utama
+                  </a>
+                </div>
                 <div class="font-bold text-right">Bluesky</div>
-                <div class="text-left">@linesofcodes.bsky.social</div>
+                <div class="text-left">
+                  <a href="https://bsky.app/profile/linesofcodes.dailitation.xyz" target="_blank" rel="noreferrer" class="underline print:no-underline">
+                    @linesofcodes.bsky.social
+                  </a>
+                </div>
             </div>
         </section>
         <section class="bg-linear-to-br from-slate-900 to-gray-950" id="blog">
